@@ -1,50 +1,99 @@
-# Waywall-generic-config
+# Waywall Config — 1366x768
 
-## Credits:
-Thank you so much to @dariasc on discord for producing a config that slowly evolved into this config!
+## Introdução
 
-## Features:
-- Configurable colors for mirrors and background
-- Configurable ninbot position and opacity
-- Toggleable mirrors for e-counter, pie chart, and percentages (for both thin and tall) (with toggleable color keys)
-- Configurable hotkeys for resolution changes and ninjabrain bot visibility
-- Toggleable and configurable keyboard remaps
-- Coupled ninbot and paceman for easy setup
-- Stretched and normal measuring overlays
-- Compatible with Char's resize animations https://github.com/char3210/resize_animation/blob/main/resize_animation_waywall.py
-- Support for resolution specific overlays for borders and more
-- Support for auto changing mouse sensitivity https://github.com/Esensats/mcsr-calcsens
+Este repositório é uma versão modificada do **[Waywall Generic Config](https://github.com/arjuncgore/waywall_generic_config)**, adaptada para funcionar o mais próximo do correto na resolução **1366x768**.
 
-## Setup:
-IMPORTANT: If you already have a config that you wish to save, run this command to move it to waywall.bkp
+## Descrição
+
+O foco desta versão é ajustar **mirrors, overlays e resoluções** para telas 1366x768, mantendo o comportamento e as funcionalidades do config original, mas com melhor alinhamento e usabilidade nessa resolução.
+
+As modificações envolvem principalmente ajustes de tamanho, posição e escala dos elementos visuais.
+
+## Instalação
+
+Clone este repositório diretamente na pasta de configuração do Waywall:
+
+```bash
+git clone https://github.com/gustavogordoni/waywall-config ~/.config/waywall
+````
+
+Caso já possua um config anterior e queira fazer backup:
+
 ```bash
 mv ~/.config/waywall ~/.config/waywall.bkp
+git clone https://github.com/gustavogordoni/waywall-config ~/.config/waywall
 ```
-Then or otherwise
-```bash
-git clone https://github.com/arjuncgore/waywall_generic_config.git ~/.config/waywall
-```
-This clones this repository directly to your waywall config folder
 
-If you have a 1440p monitor, add this argument to the clone command `-b 1440`
+## Imagens (Screenshots)
 
-## Configuration:
-Just edit `remaps.lua` and the first few lines in `config.lua` for what you want. Might add a minor guide here later but it's fairly self-explanatory.
+<img src="preview/tall_1.png" width="1366" />
+<img src="preview/tall_2.png" width="1366" />
+<img src="preview/thin_1.png" width="1366" />
+<img src="preview/thin_2.png" width="1366" />
+<!-- <img src="preview/wide_1.png" width="1366" /> -->
+<img src="preview/wide_2.png" width="1366" />
 
-Use this link with an overlay width of 30 to create your own stretched overlay https://qmaxxen.github.io/overlay-gen/more-options/
+<details>
+<summary><strong>Explicação detalhada das imagens</strong></summary>
 
-## Demo Images:
-### Original
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e0fc27cb-965b-458f-be71-e3740d6d1575" />
+### Tall (Mirror de medição / Eye Throws)
 
-<img width="1919" height="1080" alt="image" src="https://github.com/user-attachments/assets/4465d749-9452-4b0d-b148-ba0c0dd4a2b8" />
+As imagens abaixo mostram o **modo Tall**, ativado pela tecla **F2**.
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/72194c85-7037-4750-8659-43071c36c49b" />
+Esse modo exibe um *mirror* vertical que permite ao jogador **medir lançamentos do Olho do Fim** com precisão, utilizando o **Ninjabrain Bot**.
+Ele também é totalmente compatível com **Boat Eye**, sendo possível utilizar medições tanto com barco quanto sem, dependendo da configuração de sensibilidade.
 
+Esse setup é ideal para:
 
-### With some configuration
-<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/571e1bfb-deb5-4233-a898-438a7b4a4580" />
+* Medir eye throws com Ninjabrain Bot
+* Utilizar Boat Eye no Wayland
+* Trabalhar com sensibilidade ajustada automaticamente via Waywall
 
-<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/68b9003b-befe-49e1-8f06-b0dbcf7d2648" />
+<img src="preview/tall_1.png" width="1366" />
+<img src="preview/tall_2.png" width="1366" />
 
-<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/583a471d-005f-4986-b593-2f9633e09254" />
+---
+
+### Thin (Contagem de entidades / Pie Chart)
+
+O modo **Thin** é ativado pela tecla **Alt esquerdo**.
+
+Esse modo reduz a largura da tela e facilita a **visualização da contagem de entidades em uma direção específica**, sendo extremamente útil para:
+
+* Encontrar **bastiões** no Nether
+* Utilizar o **Pie Chart** de forma mais eficiente
+* Procurar **baús de tesouro**
+* Escanear **strongholds** e localizar a sala do portal com mais facilidade
+
+<img src="preview/thin_1.png" width="1366" />
+<img src="preview/thin_2.png" width="1366" />
+
+---
+
+### Wide (Redução de fog / Exploração no Nether)
+
+O modo **Wide** é ativado pela tecla **B**.
+
+Esse modo comprime a imagem na vertical e a estica na horizontal, o que permite **reduzir significativamente o efeito do fog do jogo**, especialmente no Nether.
+
+Ele é extremamente útil para:
+
+* Localizar **Nether Fortresses**
+* Encontrar **Bastions**
+* Explorar grandes áreas do Nether com melhor visibilidade
+
+Abaixo, a comparação:
+
+* **Imagem 1**: visão normal (Wide desativado)
+* **Imagem 2**: visão com Wide ativado — o bastião se torna visível
+
+<img src="preview/wide_1.png" width="1366" />
+<img src="preview/wide_2.png" width="1366" />
+
+</details>
+
+## Créditos
+
+Config original e base do projeto:
+[https://github.com/arjuncgore/waywall_generic_config](https://github.com/arjuncgore/waywall_generic_config)
