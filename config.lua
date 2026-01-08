@@ -6,25 +6,68 @@ local toggle_bg_picture = false
 local primary_col = "#ec6e4e"
 local secondary_col = "#E446C4"
 
-local ninbot_anchor = "topright" -- topleft, top, topright, left, right, bottomleft, bottomright
-local ninbot_opacity = 1         -- 0 to 1
-
+local ninbot_anchor = "bottomleft" -- topleft, top, topright, left, right, bottomleft, bottomright
+local ninbot_opacity = 1 -- 0 to 1
 
 -- ==== MIRRORS ====
-local e_count = { enabled = true, x = 1340, y = 300, size = 5, colorkey = false }
-local thin_pie = { enabled = true, x = 1250, y = 500, size = 4, colorkey = false } -- Turning off colorkeying also maintains the original pie chart's dimensions and shows the percentages
-local thin_percent = { enabled = false, x = 1300, y = 850, size = 6 }
-local tall_pie = { enabled = true, x = 1250, y = 500, size = 4, colorkey = false } -- Leave same as thin for seamlessness
-local tall_percent = { enabled = false, x = 1300, y = 850, size = 6 }              -- Leave same as thin for seamlessness
+local e_count = {
+    enabled = true,
+    x = 950,
+    y = 210,
+    size = 3,
+    colorkey = false
+}
+
+local thin_pie = {
+    enabled = true,
+    x = 880,
+    y = 250,
+    -- size = 3,
+    size = 4,
+    colorkey = false
+}
+
+local thin_percent = {
+    -- enabled = false,
+    enabled = true,
+    x = 900,
+    y = 600,
+    size = 4
+}
+
+local tall_pie = {
+    -- enabled = true,
+    enabled = false,
+    x = 880,
+    y = 350,
+    size = 3,
+    colorkey = false
+}
+
+local tall_percent = {
+    enabled = false,
+    x = 900,
+    y = 600,
+    size = 4
+}
 
 local stretched_measure = false
 
-
 -- ==== KEYBINDS ====
 -- resolution change actions
-local thin = { key = "*-Alt_L", f3_safe = false }
-local wide = { key = "*-B", f3_safe = true }
-local tall = { key = "*-F4", f3_safe = false }
+local thin = {
+    key = "*-Alt_L",
+    f3_safe = false
+}
+local wide = {
+    key = "*-B",
+    f3_safe = true
+}
+local tall = {
+    -- key = "*-F4",
+    key = "*-F2",
+    f3_safe = false
+}
 
 -- startup actions
 local launch_paceman_key = "Shift-P"
@@ -34,29 +77,32 @@ local toggle_fullscreen_key = "Shift-O"
 local toggle_ninbot_key = "*-apostrophe"
 local toggle_remaps_key = "Insert"
 
-
 -- ==== MISC ====
-local remaps_text_config = { text = "rebinds off", x = 100, y = 100, size = 2 }
+local remaps_text_config = {
+    text = "rebinds off",
+    x = 100,
+    y = 100,
+    size = 2
+}
 local res_1440 = false
-local sens_change = { enabled = false, normal = 1.0, tall = 0.1 } -- make sure raw input is off
 
+-- local sens_change = {
+--     enabled = false,
+--     normal = 1.0,
+--     tall = 0.1
+-- } -- make sure raw input is off
 
+-- local sens_change = {
+--     enabled = true, -- "mouseSensitivity": 0.02291165
+--     normal = 9.72824034,
+--     tall =O 0.65626127
+-- } -- make sure raw input is off
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+local sens_change = {
+    enabled = true, -- "mouseSensitivity": 0.02291165
+    normal = 9.69555084,
+    tall = 0.65405606,
+} -- make sure raw input is off
 
 -- ======== EXPORT ========
 return {
@@ -85,5 +131,5 @@ return {
     toggle_remaps_key = toggle_remaps_key,
 
     remaps_text_config = remaps_text_config,
-    sens_change = sens_change,
+    sens_change = sens_change
 }

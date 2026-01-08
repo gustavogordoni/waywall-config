@@ -52,7 +52,8 @@ local helpers = require("waywall.helpers")
 
 local config = {
     input = {
-        layout = "us",
+        -- layout = "us",
+        layout = "br",
         repeat_rate = 40,
         repeat_delay = 300,
         remaps = keyboard_remaps,
@@ -117,6 +118,8 @@ local make_mirror = function(options)
     end
 end
 
+local eye_dst_768 = { x = 0, y = 190, w = 490, h = 400 }
+
 local mirrors = {
     e_counter = make_mirror({
         src = { x = 13, y = 37, w = 37, h = 9 },
@@ -126,11 +129,12 @@ local mirrors = {
             output = primary_col,
         } or nil,
     }),
-
+    
 
     thin_pie_all = make_mirror({
         src = res_1440
             and { x = 10, y = 694, w = 340, h = 221 }
+            -- or { x = 0, y = 674, w = 340, h = 221 },
             or { x = 0, y = 674, w = 340, h = 221 },
         dst = { x = thin_pie.x, y = thin_pie.y, w = 420 * thin_pie.size / 4, h = 273 * thin_pie.size / 4 },
     }),
@@ -289,10 +293,10 @@ local mirrors = {
             or { x = 162, y = 7902, w = 60, h = 580 },
         dst = res_1440
             and { x = 94, y = 470, w = 900, h = 500 }
-            or { x = 30, y = 340, w = 700, h = 400 },
+            -- or { x = 30, y = 340, w = 700, h = 400 },
+            or eye_dst_768,
     }),
 }
-
 
 --*********************************************************************************************** BOATEYE
 local make_image = function(path, dst)
@@ -312,12 +316,14 @@ local images = {
     measuring_overlay = make_image(overlay_path, {
         dst = res_1440
             and { x = 94, y = 470, w = 900, h = 500 }
-            or { x = 30, y = 340, w = 700, h = 400 },
+            -- or { x = 30, y = 340, w = 700, h = 400 },
+            or eye_dst_768,
     }),
     stretched_overlay = make_image(stretched_overlay_path, {
         dst = res_1440
             and { x = 94, y = 470, w = 900, h = 500 }
-            or { x = 30, y = 340, w = 700, h = 400 },
+            -- or { x = 30, y = 340, w = 700, h = 400 },
+            or eye_dst_768,
     }),
     tall_overlay = make_image(tall_overlay_path, {
         dst = res_1440
