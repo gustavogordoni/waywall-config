@@ -1,8 +1,13 @@
 # Waywall Config — 1366x768
 
+[![GitHub last commit](https://img.shields.io/github/last-commit/gustavogordoni/waywall-config?color=purple)](https://github.com/gustavogordoni/waywall-config/commits/)
+[![License](https://img.shields.io/github/license/gustavogordoni/waywall-config)](https://github.com/gustavogordoni/waywall-config/blob/main/LICENSE)
+
 ## Introdução
 
 Este repositório é uma versão modificada do **[Waywall Generic Config](https://github.com/arjuncgore/waywall_generic_config)**, adaptada para funcionar o mais próximo do correto na resolução **1366x768**.
+
+[English Version](README.en.md)
 
 ## Descrição
 
